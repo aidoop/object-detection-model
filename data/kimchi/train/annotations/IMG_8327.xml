@@ -1,0 +1,26 @@
+<annotation>
+	<folder>kimchi</folder>
+	<filename>IMG_8327.jpeg</filename>
+	<path>/Users/jinwonchoi/Downloads/kimchi/IMG_8327.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3024</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>kimchi</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>442</xmin>
+			<ymin>1366</ymin>
+			<xmax>1932</xmax>
+			<ymax>2826</ymax>
+		</bndbox>
+	</object>
+</annotation>

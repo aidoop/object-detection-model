@@ -1,0 +1,26 @@
+<annotation>
+	<folder>kimchi</folder>
+	<filename>IMG_8155.jpeg</filename>
+	<path>/Users/jinwonchoi/Downloads/kimchi/IMG_8155.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3024</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>kimchi</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1002</xmin>
+			<ymin>1321</ymin>
+			<xmax>2382</xmax>
+			<ymax>2626</ymax>
+		</bndbox>
+	</object>
+</annotation>

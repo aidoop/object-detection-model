@@ -6,7 +6,9 @@ import argparse
 from detector import DetectorTF2
 
 
-def DetectFromVideo(detector, Video_path, save_output=False, output_dir="output/"):
+def detect_from_video_file(
+    detector, Video_path, save_output=False, output_dir="output/"
+):
 
     cap = cv2.VideoCapture(Video_path)
     if save_output:
@@ -42,7 +44,7 @@ def DetectFromVideo(detector, Video_path, save_output=False, output_dir="output/
         out.release()
 
 
-def DetectImagesFromFolder(
+def detect_from_image_directory(
     detector, images_dir, save_output=False, output_dir="output/"
 ):
 
@@ -53,8 +55,10 @@ def DetectImagesFromFolder(
             img = cv2.imread(image_path)
             det_boxes = detector.DetectFromImage(img)
             img = detector.DisplayDetections(img, det_boxes)
+            height, width, _ = img.shape
+            img_resize = cv2.resize(img, (int(width / 4), int(height / 4)))
 
-            cv2.imshow("TF2 Detection", img)
+            cv2.imshow("TF2 Detection", img_resize)
             cv2.waitKey(0)
 
             if save_output:
@@ -130,14 +134,14 @@ if __name__ == "__main__":
     )
 
     if args.video_input:
-        DetectFromVideo(
+        detect_from_video_file(
             detector,
             args.video_path,
             save_output=args.save_output,
             output_dir=args.output_directory,
         )
     else:
-        DetectImagesFromFolder(
+        detect_from_image_directory(
             detector,
             args.images_dir,
             save_output=args.save_output,
