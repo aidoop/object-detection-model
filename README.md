@@ -249,6 +249,10 @@ tar -xzvf ssd_mobilenet_v2_320x320_coco17_tpu-8.tar.gz
   ```bash
   tensorboard --logdir=models/ssd_mobilenet_v2_kimchi
   ```
+## export a model using train result
+```bash
+python ./exporter_main_v2.py --input_type image_tensor --pipeline_config_path ../models/ssd_mobilenet_v2_kimchi/pipeline.config --trained_checkpoint_dir ../models/ssd_mobilenet_v2_kimchi/ --output_directory ../models/ssd_mobilenet_v2_kimchi_light/exported_model
+```
 
 ## Inference Test
 ```bash
