@@ -1,4 +1,4 @@
-out_dir=../models/ssd_mobilenet_v2_kimchi/
+out_dir=../models/ssd_mobilenet_v2_kimchi_light2/
 mkdir -p $out_dir
 python model_main_tf2.py --alsologtostderr --model_dir=$out_dir --checkpoint_every_n=500  \
                          --pipeline_config_path=../models/ssd_mobilenet_v2_kimchi.config \

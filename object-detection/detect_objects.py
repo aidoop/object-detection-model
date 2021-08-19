@@ -55,10 +55,10 @@ def detect_from_image_directory(
             img = cv2.imread(image_path)
             det_boxes = detector.DetectFromImage(img)
             img = detector.DisplayDetections(img, det_boxes)
-            height, width, _ = img.shape
-            img_resize = cv2.resize(img, (int(width / 4), int(height / 4)))
+            # height, width, _ = img.shape
+            # img_resize = cv2.resize(img, (int(width / 4), int(height / 4)))
 
-            cv2.imshow("TF2 Detection", img_resize)
+            cv2.imshow("TF2 Detection", img)
             cv2.waitKey(0)
 
             if save_output:

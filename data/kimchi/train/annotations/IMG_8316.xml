@@ -1,13 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <annotation>
 	<folder>kimchi</folder>
-	<filename>IMG_8316.jpeg</filename>
-	<path>/Users/jinwonchoi/Downloads/kimchi/IMG_8316.jpeg</path>
+	<filename>IMG_8316.png</filename>
+	<path>/Users/jinwonchoi/Downloads/kimchi/IMG_8316.png</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>3024</width>
-		<height>4032</height>
+		<width>605</width>
+		<height>806</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +18,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>1027</xmin>
-			<ymin>1276</ymin>
-			<xmax>2172</xmax>
-			<ymax>2326</ymax>
+			<xmin>205</xmin>
+			<ymin>255</ymin>
+			<xmax>434</xmax>
+			<ymax>465</ymax>
 		</bndbox>
 	</object>
 </annotation>

@@ -1,3 +1,8 @@
+data/
+data/*.py
+
+
+# tfrecord files
 *.record
 
 # Byte-compiled / optimized / DLL files
