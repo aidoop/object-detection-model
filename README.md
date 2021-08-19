@@ -1,5 +1,8 @@
 # object-detection-model
 
+## Reference
+ - https://github.com/abdelrahman-gaber/tf2-object-detection-api-tutorial
+
 ## Preaparation for train
 
 ### Prepare train & test images
