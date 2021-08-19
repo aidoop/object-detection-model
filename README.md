@@ -19,9 +19,9 @@ labelImg
 - convert csv files for train and test to tfrecord files using generate_tfrecord.py
   ```bash
   # create tfrecords for train images
-  python generate_tfrecord.py --path_to_images ../data/kimchi/train/images --path_to_annot ../data/kimchi/train_labels.csv--path_to_label_map ../models/kimchi_labelmap.pbtxt --path_to_save_tfrecords ../data/kimchi/train.record
+  python generate_tfrecord.py --path_to_images ../data/kimchi/train/images --path_to_annot ../data/kimchi/train_labels.csv --path_to_label_map ../models/kimchi_labelmap.pbtxt --path_to_save_tfrecords ../data/kimchi/train.record
   # create tfrecords for test images
-  python generate_tfrecord.py --path_to_images ../data/kimchi/test/images --path_to_annot ../data/kimchi/test_labels.csv--path_to_label_map ../models/kimchi_labelmap.pbtxt --path_to_save_tfrecords ../data/kimchi/val.record
+  python generate_tfrecord.py --path_to_images ../data/kimchi/test/images --path_to_annot ../data/kimchi/test_labels.csv --path_to_label_map ../models/kimchi_labelmap.pbtxt --path_to_save_tfrecords ../data/kimchi/val.record
   ```
 ### Prepare pretrained model
 ```bash
@@ -249,6 +249,10 @@ tar -xzvf ssd_mobilenet_v2_320x320_coco17_tpu-8.tar.gz
   ```bash
   tensorboard --logdir=models/ssd_mobilenet_v2_kimchi
   ```
+## export a model using train result
+```bash
+python ./exporter_main_v2.py --input_type image_tensor --pipeline_config_path ../models/ssd_mobilenet_v2_kimchi/pipeline.config --trained_checkpoint_dir ../models/ssd_mobilenet_v2_kimchi/ --output_directory ../models/ssd_mobilenet_v2_kimchi_light/exported_model
+```
 
 ## Inference Test
 ```bash
